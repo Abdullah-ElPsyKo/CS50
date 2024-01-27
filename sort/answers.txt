@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: Sorting the already sorted was extremely fast, faster than the third sorting method(selection). Bubble sorting performs better when data is already sorted.
+
+sort2 uses: merge sort
+
+How do you know?: It was overall the fastest sorting method. It has beaten all the other methods as it is the most efficient method.
+
+sort3 uses: selection sort
+
+How do you know?: Selection still needs to go through all the data to check wrether everything is indeed sorted.

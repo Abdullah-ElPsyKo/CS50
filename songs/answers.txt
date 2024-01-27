@@ -1,0 +1,2 @@
+1. To charachterize the audio aura I would use the average energy, valence and the danceability of the songs
+2. 100 songs is still limited, so it may not be very representative. It would be better to include the listeners reviews (likes) and include more songs throughout the year from different genres, this way we can be more accurate.

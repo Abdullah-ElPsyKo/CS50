@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+
+            document.addEventListener("DOMContentLoaded", (event) => {
+                var buttons = document.querySelectorAll('.WCwinner button'); // buttons in one class
+                var secQuestion = document.getElementById('submFreeQ1');
+                buttons.forEach(function(button) { // itterate through all the buttons
+                    button.addEventListener("click", (event) => {
+                        var correct = document.querySelector('body > div > div > h4');
+                        if (button.textContent !== "Argentina") {
+                            button.style.background = 'red';
+                            correct.innerHTML = "Incorrect.";
+                            correct.style.color = 'red';
+                        }
+                        else
+                        {
+                            button.style.background = 'green';
+                            correct.innerHTML = "Correct!";
+                            correct.style.color = 'green';
+                        }
+                    });
+                });
+                secQuestion.addEventListener("click", (event) => {
+                    var secQuestionInp = document.getElementById('freeResp1');
+                    var correct = document.getElementById('check2nd');
+                    if ((secQuestionInp.value).toLowerCase() === "coca cola")
+                    {
+                        correct.innerHTML = "Correct!";
+                        correct.style.color = 'green';
+                        secQuestionInp.style.background = "rgba(0,255,0,0.3)"
+
+                    }
+                    else
+                    {
+                        correct.innerHTML = "Incorrect.";
+                        correct.style.color = 'red';
+                        secQuestionInp.style.background = "rgba(255,0,0,0.3)"
+                    }
+                })
+            });
+        </script>
+
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3> Who won the world cup in Qatar?</h3>
+                <h4></h4>
+                <div class="WCwinner">
+                    <button>Belgium</button>
+                    <button>Argentina</button>
+                    <button>Portugal</button>
+                    <button>Croatia</button>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What was the first soft drink in space?</h3>
+                <h4 id="check2nd"></h4>
+                <input type="text" id="freeResp1" size = "20"> <button type="submit" id="submFreeQ1">Check Answer</button>
+            </div>
+        </div>
+    </body>
+</html>
